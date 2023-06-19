@@ -13,7 +13,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg)
+    FigureCanvasTkAgg, NavigationToolbar2Tk)
 
 root = Tk()  # create parent window
 
