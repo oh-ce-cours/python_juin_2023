@@ -8,6 +8,8 @@ Created on Mon Jun 19 14:39:30 2023
 
 from tkinter import filedialog 
 from tkinter import *
+import pandas as pd 
+import matplotlib.pyplot as plt
 
 root = Tk()  # create parent window
 
@@ -44,6 +46,6 @@ selct_file = Button(root, text="Fichier", command=get_filename)
 selct_file.pack()
 lbl = Label(root , textvariable=var)
 lbl.pack()
-graph = Button(root, text="Grpah", command=graph_from_stringvar)
+graph = Button(root, text="Graph", command=graph_from_stringvar)
 graph.pack()
 root.mainloop()
