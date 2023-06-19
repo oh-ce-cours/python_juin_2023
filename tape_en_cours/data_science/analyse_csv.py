@@ -18,5 +18,5 @@ df = pd.read_csv(
 )
 
 from numpy import genfromtxt, load, loadtxt
-my_data = loadtxt(fname, delimiter=';')
+my_data = loadtxt(fname, sep=';')
 
