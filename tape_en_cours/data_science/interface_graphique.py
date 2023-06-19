@@ -39,6 +39,7 @@ def graph_from_filename(fname):
         index_col=False
     )
     fig.add_subplot(111).plot(df.freq[100:200], df.db[100:200])
+    fig.show()
 
 def graph_from_stringvar():
     fname = var.get()
