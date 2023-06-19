@@ -20,6 +20,7 @@ def get_filename() -> str:
         title="Select File",
         filetypes=(("csv","*.csv"),)
         ) 
+    var.set(filename)
     return filename
 
 
