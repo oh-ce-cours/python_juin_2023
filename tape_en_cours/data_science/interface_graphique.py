@@ -22,7 +22,7 @@ def get_filename() -> str:
     return filename
 
 
-turn_on = Button(root, text="ON", command=get_filename())
+turn_on = Button(root, text="ON", command=get_filename)
 turn_on.pack()
 
 
