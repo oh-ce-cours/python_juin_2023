@@ -11,6 +11,7 @@ from tkinter import *
 
 root = Tk()  # create parent window
 
+fonction de callback / rappel
 
 def get_filename() -> str:
     filename = filedialog.askopenfilename(
@@ -21,7 +22,7 @@ def get_filename() -> str:
     return filename
 
 
-turn_on = Button(root, text="ON", command=get_filename)
+turn_on = Button(root, text="ON", command=get_filename())
 turn_on.pack()
 
 
