@@ -21,7 +21,6 @@ def get_filename() -> str:
     return filename
 
 
-# use Button and Label widgets to create a simple TV remote
 turn_on = Button(root, text="ON", command=get_filename)
 turn_on.pack()
 
