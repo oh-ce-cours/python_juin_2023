@@ -19,5 +19,6 @@ df = pd.read_csv(
 )
 
 plt.plot(df.freq, df.db)
+plt.show()
 
 
