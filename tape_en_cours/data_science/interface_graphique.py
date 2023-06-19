@@ -24,9 +24,10 @@ def get_filename() -> str:
     return filename
 
 
-turn_on = Button(root, text="ON", command=get_filename)
-turn_on.pack()
+selct_file = Button(root, text="Fichier", command=get_filename)
+selct_file.pack()
 lbl = Label(root , textvariable=var)
 lbl.pack()
+graph = Button(root, text="ON", command=get_filename)
 
 root.mainloop()
