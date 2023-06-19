@@ -12,7 +12,7 @@ from tkinter import *
 root = Tk()  # create parent window
 
 # fonction de callback / rappel
-var = StringVar("Choisir un fichier svp") 
+var = StringVar(root) 
 
 def get_filename() -> str:
     filename = filedialog.askopenfilename(
