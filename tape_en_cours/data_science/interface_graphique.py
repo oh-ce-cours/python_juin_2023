@@ -32,6 +32,7 @@ def get_filename():
     return filename
 
 def graph_from_filename(fname):
+    fig.clear()
     df = pd.read_csv(
         fname, 
         sep=";", 
