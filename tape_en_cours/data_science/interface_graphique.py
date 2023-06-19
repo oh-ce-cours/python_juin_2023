@@ -22,7 +22,7 @@ var = StringVar(root)
 fig = Figure(figsize=(5, 4), dpi=100)
 
 def get_filename():
-    filename = filedialog.askopenfilename(
+    filename = tkinter.filedialog.askopenfilename(
         initialdir= ".",
         title="Select File",
         filetypes=(("csv","*.csv"),)
