@@ -9,47 +9,48 @@
 # from tkinter import filedialog 
 from tkinter import *
 import tkinter
-# import pandas as pd 
-# import matplotlib.pyplot as plt
+import pandas as pd 
+import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 
-# root = Tk()  # create parent window
+root = Tk()  # create parent window
 
-# # fonction de callback / rappel
-# var = StringVar(root) 
+# fonction de callback / rappel
+var = StringVar(root) 
 
-# def get_filename():
-#     filename = filedialog.askopenfilename(
-#         initialdir= ".",
-#         title="Select File",
-#         filetypes=(("csv","*.csv"),)
-#         ) 
-#     var.set(filename)
-#     return filename
+def get_filename():
+    filename = filedialog.askopenfilename(
+        initialdir= ".",
+        title="Select File",
+        filetypes=(("csv","*.csv"),)
+        ) 
+    var.set(filename)
+    return filename
 
-# def graph_from_filename(fname):
-#     df = pd.read_csv(
-#         fname, 
-#         sep=";", 
-#         skiprows=31, 
-#         names=["freq", "db"], 
-#         index_col=False
-#     )
+def graph_from_filename(fname):
+    fig = 
+    df = pd.read_csv(
+        fname, 
+        sep=";", 
+        skiprows=31, 
+        names=["freq", "db"], 
+        index_col=False
+    )
     
-#     plt.plot(df.freq[100:200], df.db[100:200])
-#     plt.show()
+    plt.plot(df.freq[100:200], df.db[100:200])
 
-# def graph_from_stringvar():
-#     fname = var.get()
-#     graph_from_filename(fname)
+def graph_from_stringvar():
+    fname = var.get()
+    graph_from_filename(fname)
 
 
-# selct_file = Button(root, text="Fichier", command=get_filename)
-# selct_file.pack()
-# lbl = Label(root , textvariable=var)
-# lbl.pack()
-# graph = Button(root, text="Graph", command=graph_from_stringvar)
-# graph.pack()
-# root.mainloop()
+selct_file = Button(root, text="Fichier", command=get_filename)
+selct_file.pack()
+lbl = Label(root , textvariable=var)
+lbl.pack()
+graph = Button(root, text="Graph", command=graph_from_stringvar)
+graph.pack()
+root.mainloop()
 
 
 
@@ -58,7 +59,6 @@ from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2Tk)
 # Implement the default Matplotlib key bindings.
 from matplotlib.backend_bases import key_press_handler
-from matplotlib.figure import Figure
 
 import numpy as np
 
