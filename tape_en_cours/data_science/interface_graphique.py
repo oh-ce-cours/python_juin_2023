@@ -37,8 +37,7 @@ def graph_from_filename(fname):
         names=["freq", "db"], 
         index_col=False
     )
-    
-    plt.plot(df.freq[100:200], df.db[100:200])
+    fig.add_subplot(111).plot(df.freq[100:200], df.db[100:200])
 
 def graph_from_stringvar():
     fname = var.get()
