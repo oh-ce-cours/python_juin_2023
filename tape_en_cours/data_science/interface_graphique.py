@@ -9,5 +9,5 @@ Created on Mon Jun 19 14:39:30 2023
 from tkinter import filedialog 
 from tkinter import *
 Tk().withdraw() 
-filename = filedialog.askopenfilename(initialdir= "/",title="Select File",filetypes=(("png files","*.png"),("jpeg files","*.jpg"),("all files","*.*"))) 
+filename = filedialog.askopenfilename(initialdir= "/",title="Select File",filetypes=(("all files","*.*"))) 
 print(filename)
