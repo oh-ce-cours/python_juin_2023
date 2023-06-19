@@ -74,16 +74,6 @@ canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 canvas.draw()
 canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-toolbar = NavigationToolbar2Tk(canvas, root)
-toolbar.update()
-canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-
-def on_key_press(event):
-    print("you pressed {}".format(event.key))
-    key_press_handler(event, canvas, toolbar)
-
-
 canvas.mpl_connect("key_press_event", on_key_press)
 
 
