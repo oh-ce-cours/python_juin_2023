@@ -28,6 +28,6 @@ selct_file = Button(root, text="Fichier", command=get_filename)
 selct_file.pack()
 lbl = Label(root , textvariable=var)
 lbl.pack()
-graph = Button(root, text="ON", command=get_filename)
-
+graph = Button(root, text="Grpah", command=get_filename)
+graph.pack()
 root.mainloop()
