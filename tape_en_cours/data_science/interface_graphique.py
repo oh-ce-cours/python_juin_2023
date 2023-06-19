@@ -24,6 +24,7 @@ def get_filename() -> str:
 
 turn_on = Button(root, text="ON", command=get_filename)
 turn_on.pack()
-
+lbl = Label(maFenetre , text = "CRMEF OUJDA")
+lbl.pack()
 
 root.mainloop()
