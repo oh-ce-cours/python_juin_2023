@@ -18,7 +18,7 @@ df = pd.read_csv(
     index_col=False
 )
 
-plt.plot(df.freq, df.db)
+plt.plot(df.freq[100:200], df.db[100:200])
 plt.show()
 
 
