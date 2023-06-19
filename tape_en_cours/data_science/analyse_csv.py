@@ -17,6 +17,6 @@ df = pd.read_csv(
     index_col=False
 )
 
-from numpy import genfromtxt
-my_data = genfromtxt(fname, delimiter=';')
+from numpy import genfromtxt, load, loadtxt
+my_data = loadtxt(fname, delimiter=';')
 
