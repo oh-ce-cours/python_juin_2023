@@ -12,6 +12,6 @@ Tk().withdraw()
 filename = filedialog.askopenfilename(
     initialdir= ".",
     title="Select File",
-    filetypes=(("all files",".*"))
+    filetypes=(("csv","*.csv"))
 ) 
 print(filename)
