@@ -47,27 +47,19 @@ def graph_from_stringvar():
     fname = var.get()
     graph_from_filename(fname)
 
-def configure_select():
-    selct_file = Button(root, text="Fichier", command=get_filename)
-    selct_file.pack()
 
-def configure_label():
-    lbl = Label(root , textvariable=var)
-    lbl.pack()
+selct_file = Button(root, text="Fichier", command=get_filename)
+selct_file.pack()
+lbl = Label(root , textvariable=var)
+lbl.pack()
+graph = Button(root, text="Graph", command=graph_from_stringvar)
+graph.pack()
+canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-def configure_graph():
-    graph = Button(root, text="Graph", command=graph_from_stringvar)
-    graph.pack()
-    canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-    toolbar = NavigationToolbar2Tk(canvas, root)
-    toolbar.update()
-    canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+toolbar = NavigationToolbar2Tk(canvas, root)
+toolbar.update()
+canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-def configure_window():
-    configure_select()
-    configure_label()
-    configure_graph()
-    
 
-configure_window()
+
 root.mainloop()
