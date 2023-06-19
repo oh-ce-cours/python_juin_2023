@@ -55,4 +55,11 @@ lbl.pack()
 graph = Button(root, text="Graph", command=graph_from_stringvar)
 graph.pack()
 canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+
+toolbar = NavigationToolbar2Tk(canvas, root)
+toolbar.update()
+canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+
+
+
 root.mainloop()
