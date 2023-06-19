@@ -41,6 +41,7 @@ def graph_from_filename(fname):
         index_col=False
     )
     fig.add_subplot(111).plot(df.freq[100:200], df.db[100:200])
+    fig.title("Mon joli graph")
     canvas.draw()
 
 def graph_from_stringvar():
