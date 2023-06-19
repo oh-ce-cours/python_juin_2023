@@ -20,6 +20,7 @@ root = Tk()  # create parent window
 # fonction de callback / rappel
 var = StringVar(root) 
 fig = Figure(figsize=(5, 4), dpi=100)
+canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 
 def get_filename():
     filename = tkinter.filedialog.askopenfilename(
@@ -39,6 +40,7 @@ def graph_from_filename(fname):
         index_col=False
     )
     fig.add_subplot(111).plot(df.freq[100:200], df.db[100:200])
+    canvas.draw()
 
 def graph_from_stringvar():
     fname = var.get()
@@ -51,7 +53,5 @@ lbl = Label(root , textvariable=var)
 lbl.pack()
 graph = Button(root, text="Graph", command=graph_from_stringvar)
 graph.pack()
-canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
-canvas.draw()
 canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 root.mainloop()
