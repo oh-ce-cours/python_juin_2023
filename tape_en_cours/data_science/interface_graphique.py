@@ -35,11 +35,15 @@ def graph_from_filename(fname):
     plt.plot(df.freq[100:200], df.db[100:200])
     plt.show()
 
+def graph_from_stringvar():
+    fname = var.get()
+    graph_from_filename(fname)
+
 
 selct_file = Button(root, text="Fichier", command=get_filename)
 selct_file.pack()
 lbl = Label(root , textvariable=var)
 lbl.pack()
-graph = Button(root, text="Grpah", command=graph_from_filename)
+graph = Button(root, text="Grpah", command=graph_from_stringvar)
 graph.pack()
 root.mainloop()
