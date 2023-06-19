@@ -10,7 +10,7 @@ from tkinter import filedialog
 from tkinter import *
 Tk().withdraw() 
 filename = filedialog.askopenfilename(
-    initialdir= "/",
+    initialdir= ".",
     title="Select File",
     filetypes=(("all files","*.*"))
 ) 
