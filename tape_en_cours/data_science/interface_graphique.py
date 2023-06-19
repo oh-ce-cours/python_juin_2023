@@ -12,6 +12,8 @@ import tkinter
 import pandas as pd 
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import (
+    FigureCanvasTkAgg)
 
 root = Tk()  # create parent window
 
@@ -58,10 +60,6 @@ root.mainloop()
 
 
 
-from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg, NavigationToolbar2Tk)
-# Implement the default Matplotlib key bindings.
-from matplotlib.backend_bases import key_press_handler
 
 import numpy as np
 
