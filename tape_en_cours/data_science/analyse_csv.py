@@ -16,3 +16,7 @@ df = pd.read_csv(
     names=["freq", "db"], 
     index_col=False
 )
+
+from numpy import genfromtxt
+my_data = genfromtxt(fname, delimiter=',')
+
