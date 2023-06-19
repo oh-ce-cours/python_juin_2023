@@ -13,6 +13,6 @@ df = pd.read_csv(
     fname, 
     sep=";", 
     skiprows=31, 
-    #names=["freq", "db"], 
+    names=["freq", "db"], 
     index_col=False
 )
