@@ -17,6 +17,7 @@ root = Tk()  # create parent window
 
 # fonction de callback / rappel
 var = StringVar(root) 
+fig = Figure(figsize=(5, 4), dpi=100)
 
 def get_filename():
     filename = filedialog.askopenfilename(
@@ -69,7 +70,6 @@ import numpy as np
 root = tkinter.Tk()
 root.wm_title("Embedding in Tk")
 
-fig = Figure(figsize=(5, 4), dpi=100)
 t = np.arange(0, 3, .01)
 fig.add_subplot(111).plot(t, 2 * np.sin(2 * np.pi * t))
 
