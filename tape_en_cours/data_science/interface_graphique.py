@@ -23,6 +23,18 @@ def get_filename() -> str:
     var.set(filename)
     return filename
 
+def graph_from_filename(fname):
+    df = pd.read_csv(
+        fname, 
+        sep=";", 
+        skiprows=31, 
+        names=["freq", "db"], 
+        index_col=False
+    )
+    
+    plt.plot(df.freq[100:200], df.db[100:200])
+    plt.show()
+
 
 selct_file = Button(root, text="Fichier", command=get_filename)
 selct_file.pack()
