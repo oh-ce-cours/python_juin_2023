@@ -50,6 +50,9 @@ lbl = Label(root , textvariable=var)
 lbl.pack()
 graph = Button(root, text="Graph", command=graph_from_stringvar)
 graph.pack()
+canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
+canvas.draw()
+canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 root.mainloop()
 
 
@@ -70,9 +73,6 @@ fig = Figure(figsize=(5, 4), dpi=100)
 t = np.arange(0, 3, .01)
 fig.add_subplot(111).plot(t, 2 * np.sin(2 * np.pi * t))
 
-canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
-canvas.draw()
-canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
 canvas.mpl_connect("key_press_event", on_key_press)
 
