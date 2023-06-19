@@ -48,7 +48,8 @@ def graph_from_stringvar():
     graph_from_filename(fname)
 
 
-selct_file = Button(root, text="Fichier", command=get_filename)
+selct_file = But
+ton(root, text="Fichier", command=get_filename)
 selct_file.pack()
 lbl = Label(root , textvariable=var)
 lbl.pack()
